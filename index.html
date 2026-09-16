@@ -14,6 +14,10 @@
     h1 { margin: 0; font-size: clamp(2rem, 4.4vw, 3.5rem); line-height: 1.18; font-weight: 650; letter-spacing: -0.035em; text-wrap: balance; }
     .authors { margin: 32px auto 0; max-width: 820px; font-size: 1.15rem; line-height: 1.9; color: #44556a; }
     .authors span { display: inline-block; margin: 0 9px; }
+    .authors sup { font-size: 0.75em; line-height: 0; margin-left: 2px; }
+    .author-notes { margin: 18px auto 0; font-size: 0.9rem; line-height: 1.8; color: #667588; }
+    .author-notes p { margin: 4px 0; }
+    .author-notes a { color: #1c466b; text-underline-offset: 3px; overflow-wrap: anywhere; }
     .status { margin: 64px auto 0; padding-top: 32px; border-top: 1px solid #e5e9ee; max-width: 580px; }
     .status h2 { font-size: 1.15rem; font-weight: 500; color: #1c466b; margin: 0; }
     .status p { margin: 12px 0 0; font-size: 1rem; line-height: 1.7; color: #667588; }
@@ -26,8 +30,14 @@
     <!-- Edit the paper title and author list here. -->
     <h1>React When You Need To: Event-Triggered Asynchronous Inference for VLA Policies</h1>
     <p class="authors">
-      <span>Yansong Wu</span><span>Huaqing Li</span><span>Tianding Hou</span><span>Lingyun Chen</span><span>Alois Knoll</span>
+      <span>Yansong Wu<sup>1,*,†</sup></span><span>Huaqing Li<sup>1,*</sup></span><span>Tianding Hou<sup>1,*</sup></span><span>Lingyun Chen<sup>1,2</sup></span><span>Alois Knoll<sup>1</sup></span>
     </p>
+    <!-- Add the full name for affiliation 2 here when confirmed. -->
+    <div class="author-notes">
+      <p><sup>1</sup> Munich Institute of Robotics and Machine Intelligence (MIRMI),<br>Technical University of Munich, Germany</p>
+      <p>* Equal contribution</p>
+      <p>† Corresponding author: Yansong Wu (<a href="mailto:yansong.wu@tum.de">yansong.wu@tum.de</a>)</p>
+    </div>
     <!-- Replace this section with your abstract, videos, paper and code links. -->
     <section class="status" aria-labelledby="status-title">
       <h2 id="status-title">Coming soon</h2>
