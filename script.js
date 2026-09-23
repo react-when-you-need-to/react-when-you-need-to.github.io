@@ -347,6 +347,27 @@ document.querySelectorAll('.demo-browser').forEach((browser) => {
   });
 });
 
+// Public unique-visitor counter. Local previews read the total without incrementing it.
+const visitCount = document.querySelector("#visit-count");
+if (visitCount) {
+  const counterUrl = new URL("https://counterapi.com/api/react-when-you-need-to.github.io/view/homepage");
+  counterUrl.searchParams.set("unique", "true");
+  if (["localhost", "127.0.0.1"].includes(window.location.hostname)) {
+    counterUrl.searchParams.set("readOnly", "true");
+  }
+  fetch(counterUrl)
+    .then((response) => {
+      if (!response.ok) throw new Error("Counter unavailable");
+      return response.json();
+    })
+    .then((data) => {
+      visitCount.textContent = Number(data.value).toLocaleString();
+    })
+    .catch(() => {
+      visitCount.closest(".visit-counter").hidden = true;
+    });
+}
+
 // Native controls remain available; avoid several demos playing over one another.
 document.querySelectorAll('video').forEach((video) => {
   video.addEventListener('play', () => {
