@@ -1,13 +1,14 @@
 # React When You Need To
 
-本仓库是 https://react-when-you-need-to.github.io/ 的网站代码。
+This repo is the source code of website https://react-when-you-need-to.github.io/ as the complementary material for the thesis submission.
 
-## 本地预览
+## localhost
 
-在仓库目录中运行：
+run in root：
 
 ```bash
 python3 -m http.server 8765
 ```
 
-浏览器打开 http://localhost:8765/。
+open http://localhost:8765/.
+or open with live-server extension.
